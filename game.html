@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe UI</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+    }
+
+    .container{
+      text-align:center;
+    }
+
+    h1{
+      color:white;
+      margin-bottom:25px;
+      font-size:45px;
+      letter-spacing:2px;
+      text-shadow:0 0 15px cyan;
+    }
+
+    .board{
+      display:grid;
+      grid-template-columns:repeat(3,110px);
+      grid-template-rows:repeat(3,110px);
+      gap:15px;
+    }
+
+    .cell{
+      background:rgba(255,255,255,0.08);
+      border:2px solid rgba(255,255,255,0.2);
+      border-radius:18px;
+      cursor:pointer;
+      transition:0.3s;
+      backdrop-filter:blur(10px);
+      box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .cell:hover{
+      transform:scale(1.05);
+      background:rgba(0,255,255,0.15);
+      box-shadow:0 0 20px cyan;
+    }
+
+    @media(max-width:500px){
+      .board{
+        grid-template-columns:repeat(3,85px);
+        grid-template-rows:repeat(3,85px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="board">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+
+</body>
+</html>
